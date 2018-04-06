@@ -28,3 +28,4 @@ public class MainActivity extends AppCompatActivity {
 //    EditText e = (EditText) findViewById(R.id.editText);
 //    e.("New Text");
 }
+s
