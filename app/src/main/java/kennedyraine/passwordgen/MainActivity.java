@@ -38,18 +38,7 @@ public class MainActivity extends AppCompatActivity {
         radio64 = (RadioButton) findViewById(R.id.radio64);
 
         //Checkbox Values
-
-
-        btn.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-
-
-            }
-        });
-
-
+        
         //Listener for RadioButtons
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
