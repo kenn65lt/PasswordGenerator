@@ -12,10 +12,10 @@
         android:layout_width="164dp"
         android:layout_height="78dp"
         android:layout_marginBottom="64dp"
-        android:layout_marginEnd="98dp"
-        android:layout_marginLeft="98dp"
-        android:layout_marginRight="98dp"
-        android:layout_marginStart="98dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginRight="110dp"
+        android:layout_marginStart="110dp"
         android:text="Randomize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,10 +25,12 @@
         android:id="@+id/TextView"
         android:layout_width="295dp"
         android:layout_height="63dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginLeft="33dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginStart="33dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="44dp"
+        android:layout_marginStart="45dp"
+        android:text="adasasdas"
+        android:textAppearance="@style/TextAppearance.AppCompat"
         app:layout_constraintBottom_toTopOf="@+id/randomBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -52,10 +54,15 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="26dp"
+        android:layout_marginEnd="138dp"
+        android:layout_marginLeft="138dp"
+        android:layout_marginRight="138dp"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="78dp"
         android:text="Password Length"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/guideline2" />
 
     <RadioGroup
         android:id="@+id/passLengthGroup"
@@ -64,81 +71,54 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginBottom="27dp"
-        android:layout_marginTop="13dp"
-        app:layout_constraintBottom_toTopOf="@+id/randomBtn"
+        android:layout_marginBottom="42dp"
+        android:layout_marginEnd="102dp"
+        android:layout_marginLeft="102dp"
+        android:layout_marginRight="102dp"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
-        <!--android:gravity="center_horizontal"-->
+        <!--android:gravity="center_horizontal"--><![CDATA[
 
-        <CheckBox
-            android:id="@+id/checkBox8"
-            android:layout_width="59dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginEnd="313dp"
-            android:layout_marginLeft="58dp"
-            android:layout_marginRight="313dp"
-            android:layout_marginStart="58dp"
-            android:layout_marginTop="10dp"
-            android:text="8"
-            app:layout_constraintBottom_toTopOf="@+id/checkBox16"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-        <CheckBox
-            android:id="@+id/checkBox16"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginEnd="305dp"
-            android:layout_marginLeft="58dp"
-            android:layout_marginRight="305dp"
-            android:layout_marginStart="58dp"
-            android:text="16"
-            app:layout_constraintBottom_toTopOf="@+id/checkBox32"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox8" />
         />
 
-        <CheckBox
-            android:id="@+id/checkBox32"
-            android:layout_width="59dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginEnd="305dp"
-            android:layout_marginLeft="58dp"
-            android:layout_marginRight="305dp"
-            android:layout_marginStart="58dp"
-            android:text="32"
-            app:layout_constraintBottom_toTopOf="@+id/checkBox64"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox16" />
 
-        <CheckBox
-            android:id="@+id/checkBox64"
-            android:layout_width="59dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="165dp"
-            android:layout_marginEnd="305dp"
-            android:layout_marginLeft="58dp"
-            android:layout_marginRight="305dp"
-            android:layout_marginStart="58dp"
-            android:text="64"
-            app:layout_constraintBottom_toTopOf="@+id/TextView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox32" />
 
+
+
+
+        ]]>
+
+        <RadioButton
+            android:id="@+id/radio64"
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="64" />
+
+        <RadioButton
+            android:id="@+id/radio32"
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="32" />
+
+        <RadioButton
+            android:id="@+id/radio16"
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="16" />
+
+        <RadioButton
+            android:id="@+id/radio8"
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="8" />
 
         <android.support.constraint.Guideline
             android:id="@+id/guideline3"

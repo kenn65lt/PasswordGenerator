@@ -4,17 +4,27 @@ import java.util.Random;
 
 
 public class RandomGenerate {
-    double numCount, letterCount, specialNum, pWordLength;
-    double numPercentage, specPercent;
-    public final String upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-    public final String digits = "1234567890";
-    private final String specialLetters = "!@#$%&*()_+-=[]|,./?><";
+    public int pWordLength = 0;
+   public int characterCount =0;
+
+
     //constructors
-    RandomGenerate(double numCount, double letterCount, double specialNum, double pWordLength ){
-        this.numCount = numCount;
-        this.letterCount = letterCount;
-        this.specialNum = specialNum;
+    RandomGenerate(int pWordLength ){
         this.pWordLength = pWordLength;
+        characterCount = pWordLength /4;
+    }
+
+
+    public String getNum(int length){
+        String digits = "1234567890";
+
+        StringBuilder nums = new StringBuilder();
+        Random rnd = new Random();
+        while (nums.length() < length) { // length of the random string.
+            int index = (int) (rnd.nextFloat() * digits.length());
+            nums.append(digits.charAt(index));
+        }
+        return nums.toString();
     }
 
 
@@ -23,57 +33,51 @@ public class RandomGenerate {
     //Counting the percentages of the characters that are going to be put on
     //Getters and setters for the percentages
     //Returns random numbers
-    private String setNum(){
-        numPercentage   = (numCount * pWordLength) / 100;
-        StringBuffer randomNums = new StringBuffer();
+    Random rndm_method = new Random();
+    public String getUpperLetters(int length){
+        String upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-        for (int x = 0; x <= numPercentage; x++){
-            int number = getRandomNumber(digits.length());
-            char specs = digits.charAt(number);
-            randomNums.append(specs);
+        StringBuilder uppers = new StringBuilder();
+        Random rnd = new Random();
+        while (uppers.length() < length) { // length of the random string.
+            int index = (int) (rnd.nextFloat() * upperCase.length());
+            uppers.append(upperCase.charAt(index));
         }
-        return randomNums.toString();
-    }
-
-
-    public String getNum(){
-        return setNum();
-    }
-
-    public String setLettersPer(){
-        double lettersPercent =  (letterCount * pWordLength) * 100;
-        StringBuffer randomLetters = new StringBuffer();
-
-        for (int x = 0; x <= lettersPercent; x++){
-            int number = getRandomNumber(upperCase.length());
-            char specs = upperCase.charAt(number);
-            randomLetters.append(specs);
-        }
-        return randomLetters.toString();
-
+        return uppers.toString();
 //        return randomLetters.toString();
     }
 
-    public String getLetters(){
-        return setLettersPer();
-    }
 
-    private String setSpecialPer(){
-        specPercent = (specialNum / 100) * pWordLength;
-        StringBuffer randomSpecials = new StringBuffer();
 
-        for (int x = 0; x <= specPercent; x++){
-            int number = getRandomNumber(specialLetters.length());
-            char specs = specialLetters.charAt(number);
-            randomSpecials.append(specs);
+    public String getLowerLetters(int length){
+
+
+          String lowerCase = "abcdefghijklmnopqrstuvwxyz";
+
+        StringBuilder lowers = new StringBuilder();
+        Random rnd = new Random();
+            while (lowers.length() < length) { // length of the random string.
+                int index = (int) (rnd.nextFloat() * lowerCase.length());
+                lowers.append(lowerCase.charAt(index));
+            }
+            return lowers.toString();
         }
-        return randomSpecials.toString();
+
+
+
+    public String getSpecial(int length){
+
+        String specialLetters = "!@#$%&*()_+-=[]|,./?><";
+        StringBuilder specials = new StringBuilder();
+        Random rnd = new Random();
+        while (specials.length() < length) { // length of the random string.
+            int index = (int) (rnd.nextFloat() * specialLetters.length());
+            specials.append(specialLetters.charAt(index));
+        }
+        return specials.toString();
     }
 
-    public String getSpecials(){
-        return setSpecialPer();
-    }
-    //Generates random Number based on the percentage
+//    //Generates random Number based on the percentage
     private int getRandomNumber(int chars){//Chars is the length of each characters
 
         int randomInt = 0;
@@ -87,3 +91,23 @@ public class RandomGenerate {
 
     }
 }
+//    private String setMergeCharacters(){
+//        String characters = getLetters() + getLowerLetters() + getNum() + getSpecials();
+//        StringBuilder merge = new StringBuilder(characters);
+//
+//        for (int x = 0; x <= pWordLength; x++){
+//            int number = getRandomNumber(characters.length());
+//            char specs = characters.charAt(number);
+//            merge.append(specs);
+//        }
+//        return merge.toString();
+//
+//
+//    }
+
+//    public String getMergedChar(){
+//        return setMergeCharacters();
+//    }
+//}
+
+
