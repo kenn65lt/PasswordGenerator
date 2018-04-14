@@ -7,135 +7,139 @@
     tools:context=".MainActivity"
     tools:layout_editor_absoluteY="81dp">
 
+
     <Button
         android:id="@+id/randomBtn"
-        android:layout_width="164dp"
-        android:layout_height="78dp"
-        android:layout_marginBottom="64dp"
-        android:layout_marginEnd="110dp"
-        android:layout_marginLeft="110dp"
-        android:layout_marginRight="110dp"
-        android:layout_marginStart="110dp"
-        android:text="Randomize"
+        android:layout_width="242dp"
+        android:layout_height="73dp"
+        android:layout_marginBottom="55dp"
+        android:text="Generate Password"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/TextView"
-        android:layout_width="295dp"
+        android:layout_width="wrap_content"
         android:layout_height="63dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginRight="44dp"
-        android:layout_marginStart="45dp"
-        android:text="adasasdas"
+        android:layout_marginBottom="7dp"
+        android:gravity="center"
+        android:text=""
         android:textAppearance="@style/TextAppearance.AppCompat"
         app:layout_constraintBottom_toTopOf="@+id/randomBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="395dp" />
+        android:layout_marginBottom="122dp"
+        android:layout_marginTop="244dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="212dp"
+            tools:layout_editor_absoluteY="184dp">
+
+            <TextView
+                android:id="@+id/pLengthTxt"
+                android:layout_width="match_parent"
+                android:layout_height="26dp"
+                android:text="Password Length:" />
+
+            <TextView
+                android:id="@+id/specTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:text="Include Special Characters:" />
+
+            <TextView
+                android:id="@+id/numTxt"
+                android:layout_width="match_parent"
+                android:layout_height="26dp"
+                android:text="Include Numbers:" />
+
+            <TextView
+                android:id="@+id/upperTxt"
+                android:layout_width="match_parent"
+                android:layout_height="26dp"
+                android:text="Include Uppercase:" />
+
+            <TextView
+                android:id="@+id/lowerText"
+                android:layout_width="match_parent"
+                android:layout_height="26dp"
+                android:text="Include Lowercase:" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="202dp"
+            tools:layout_editor_absoluteY="122dp">
+
+            <Spinner
+                android:id="@+id/password_length"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                tools:layout_editor_absoluteX="152dp"
+                tools:layout_editor_absoluteY="158dp" />
+
+            <CheckBox
+                android:id="@+id/specialsCheck"
+                android:layout_width="match_parent"
+                android:layout_height="26dp" />
+
+            <CheckBox
+                android:id="@+id/numCheck"
+                android:layout_width="match_parent"
+                android:layout_height="26dp" />
+
+            <CheckBox
+                android:id="@+id/upperCheck"
+                android:layout_width="match_parent"
+                android:layout_height="26dp" />
+
+            <CheckBox
+                android:id="@+id/lowerCheck"
+                android:layout_width="match_parent"
+                android:layout_height="26dp" />
+        </LinearLayout>
+
+    </LinearLayout>
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="31dp" />
+        app:layout_constraintGuide_begin="374dp" />
 
-    <TextView
-        android:id="@+id/textView"
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
         android:layout_width="wrap_content"
-        android:layout_height="26dp"
-        android:layout_marginEnd="138dp"
-        android:layout_marginLeft="138dp"
-        android:layout_marginRight="138dp"
-        android:layout_marginStart="138dp"
-        android:layout_marginTop="78dp"
-        android:text="Password Length"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/guideline2" />
-
-    <RadioGroup
-        android:id="@+id/passLengthGroup"
-        android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginBottom="42dp"
-        android:layout_marginEnd="102dp"
-        android:layout_marginLeft="102dp"
-        android:layout_marginRight="102dp"
-        android:layout_marginStart="102dp"
-        android:layout_marginTop="1dp"
-        app:layout_constraintBottom_toTopOf="@+id/TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
-        <!--android:gravity="center_horizontal"--><![CDATA[
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="16dp" />
 
-        />
-
-
-
-
-
-
-        ]]>
-
-        <RadioButton
-            android:id="@+id/radio64"
-            android:layout_width="123dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="64" />
-
-        <RadioButton
-            android:id="@+id/radio32"
-            android:layout_width="123dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="32" />
-
-        <RadioButton
-            android:id="@+id/radio16"
-            android:layout_width="123dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="16" />
-
-        <RadioButton
-            android:id="@+id/radio8"
-            android:layout_width="123dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="8" />
-
-        <android.support.constraint.Guideline
-            android:id="@+id/guideline3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_begin="20dp" />
-
-        <android.support.constraint.Guideline
-            android:id="@+id/guideline4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_begin="20dp" />
-
-
-    </RadioGroup>
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="202dp" />
 
 
 </android.support.constraint.ConstraintLayout>
